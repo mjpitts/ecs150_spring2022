@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-// Use the same delay function from subroutine.c
+/*print out 1-10 over 10 seconds*/
 void delay(int number_of_seconds)
 {
     // Converting time into milli_seconds
@@ -14,12 +14,12 @@ void delay(int number_of_seconds)
     // wait until end of delay 
     while (clock() < end);
 }
-
-int main(int argc, char *argv[] ) {
-    if(argc != 3){
-        printf("Format should be: ./timeout.exe seconds command");
-    }else{
-        printf("Perfect");
+  
+/*delay driver*/
+int main() {
+    for(int i = 1; i < 11; i++){
+        delay(1);
+        printf("%d", i);
     }
     
     return 0;
