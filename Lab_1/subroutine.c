@@ -16,10 +16,10 @@ void delay(int number_of_seconds)
 }
   
 /*delay driver*/
-int main() {
-    for(int i = 1; i < 11; i++){
+int main(int argc, char *argv[] ) {
+    for(int i = 1; i < atoi(argv[1]); i++){
         delay(1);
-        printf("%d", i);
+        printf("\n %d", i);
     }
     
     return 0;
